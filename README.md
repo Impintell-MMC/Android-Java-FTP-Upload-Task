@@ -1,4 +1,4 @@
-# 📤 IntelliBoxCounter FTP Upload Task
+# 📤 Android / Java / FTP Upload Task
 
 This component provides an asynchronous FTPS file uploader for Android-based applications using `AsyncTask`.  
 It uploads all files from a local directory to a specified FTPS server and handles re-uploading, skipping, or deleting files based on rules.

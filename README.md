@@ -44,3 +44,29 @@ FtpUploadTask uploader = new FtpUploadTask(
 );
 
 uploader.execute();
+```
+| File Type | Upload Condition    | Post-upload behavior        |
+| --------- | ------------------- | --------------------------- |
+| `.db`     | Only newest is kept | Old `.db` files are deleted |
+| `.json`   | Always uploaded     | Deleted after upload        |
+| Others    | Always uploaded     | Kept                        |
+
+
+🔐 Security
+Uses FTPS with TLS encryption (execPROT("P"))
+Passive mode enabled for firewall-friendly communication
+Binary file type set for all transfers
+
+⚠️ Requirements
+Apache Commons Net 3.x dependency
+Android Context
+Internet permission in AndroidManifest.xml:
+
+```java
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+📜 License
+MIT License — © 2025 Impintell
+
+
